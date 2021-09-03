@@ -12,10 +12,12 @@ test("renders without errors", () => {
 test("shows success message on submit with form details", () => {
   //Arrange
   render(<CheckoutForm />)
+
   //Act
   const submitElement = screen.getByRole("button")
-  console.log(submitElement)
-  //Assert
+  //   const successM = screen.getByTestId("successMessage")
 
+  //Assert
+  //   expect(successM).toBeInTheDocument()
   expect(submitElement).toBeInTheDocument()
 })
