@@ -13,7 +13,9 @@ test("shows success message on submit with form details", () => {
   //Arrange
   render(<CheckoutForm />)
   //Act
-  const submitElement = screen.queryByText(/submit/)
+  const submitElement = screen.getByRole("button")
   console.log(submitElement)
   //Assert
+
+  expect(submitElement).toBeInTheDocument()
 })
